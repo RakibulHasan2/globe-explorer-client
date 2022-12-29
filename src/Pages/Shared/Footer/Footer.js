@@ -1,8 +1,12 @@
 import React from 'react';
-
+import footer from '../../../images/footer-bg.jpg'
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-300 text-base-content">
+        <footer style={{
+            backgroundImage: `url(${footer})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+        }} className="footer p-10 bg-base-300 text-white">
             <div>
                 <span className="footer-title">Services</span>
                 <a href="/" className="link link-hover">Branding</a>

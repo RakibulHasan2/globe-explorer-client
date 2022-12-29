@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHiking } from 'react-icons/fa';
+import { FaHiking,FaHome } from 'react-icons/fa';
 import './Navbar.css'
 const Navbar = () => {
     const [stateRouteName, setStateRouteName] = useState('home')
@@ -38,12 +38,12 @@ const Navbar = () => {
         <div className={`${stateRouteName === 'home' ? 'header-custom-style-home' : 'header-custom-style'}`}>
             <h2 className='mt-3 font-bold flex text-4xl'> <FaHiking className='text-green-800 mr-4'></FaHiking> Globe Explorers</h2>
             <nav className='mt-6'>
-                <Link to='/home' onClick={() => setRouteInSession('home')}>Home</Link>
-                <Link to='/about' onClick={() => setRouteInSession('about')}>About</Link>
-                <Link to='/shop' onClick={() => setRouteInSession('shop')}>Shop</Link>
-                <Link to='/packages' onClick={() => setRouteInSession()}>Packages</Link>
-                <Link to='/login' onClick={() => setRouteInSession()}>Login</Link>
-                <Link to='/signup' onClick={() => setRouteInSession()}>Login</Link>
+                <Link to='/home' className='px-4' onClick={() => setRouteInSession('home')} >Home</Link>
+                <Link to='/about'  className='px-4' onClick={() => setRouteInSession('about')}>About </Link>
+                <Link to='/shop'  className='px-4' onClick={() => setRouteInSession('shop')}>Shop</Link>
+                <Link to='/packages'  className='px-4' onClick={() => setRouteInSession()}>Packages</Link>
+                <Link to='/login'  className='px-4' onClick={() => setRouteInSession()}>Login</Link>
+                <Link to='/signup'  className='px-4' onClick={() => setRouteInSession()}>SignUp</Link>
             </nav>
         </div>
     );
