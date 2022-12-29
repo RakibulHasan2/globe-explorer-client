@@ -1,0 +1,31 @@
+.offer-card{
+    height: 330px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ .offer-card:hover{
+    background-color: rgb(112, 176, 114);
+    color: white;
+  }
+ .offer-card img{
+     width: 100px;
+     height: 100px;
+     margin-left: 36%;
+     margin-top: 20px;
+     margin-bottom: 5px;
+ }
+  /* for mobile devices */
+  @media only screen and (max-width: 600px) {
+     .offer-card{
+         height: 100%;
+         padding: 10px;
+         
+      }
+      .offer-card img{
+          width: 100px;
+          height: 100px;
+          margin-left: 20%;
+          margin-top: 20px;
+          margin-bottom: 5px;
+      }
+   }

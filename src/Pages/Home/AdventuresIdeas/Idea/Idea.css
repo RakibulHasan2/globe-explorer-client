@@ -1,0 +1,32 @@
+.idea-img{
+    margin-left: 13%;
+    margin-right: 3%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.idea-details{
+    width: 250px;
+    height: 130px;
+    text-align: center;
+}
+.see-more{
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+ /* for mobile devices */
+@media only screen and (max-width: 600px) {
+    .idea-img{
+        margin-left: 19%;
+        margin-right: 19%;
+    }
+    .idea-details{
+        height: 100%;
+        margin-left: 40px;
+    }
+    .see-more{
+        margin-left: 100px;
+        margin-bottom: 30px;
+    }
+  }

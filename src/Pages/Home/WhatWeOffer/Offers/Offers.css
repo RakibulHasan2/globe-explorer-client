@@ -1,0 +1,12 @@
+.offer-body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+ /* for mobile devices */
+ @media only screen and (max-width: 600px) {
+    .offer-body{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+  }

@@ -1,0 +1,7 @@
+
+ /* for mobile devices */
+ @media only screen and (max-width: 600px) {
+    .responsive-adventure{
+    flex-direction: column;
+    }
+  }
