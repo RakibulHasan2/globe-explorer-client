@@ -39,9 +39,9 @@ const Navbar = () => {
             <h2 className='mt-3 font-bold flex text-4xl'> <FaHiking className='text-green-800 mr-4'></FaHiking> Globe Explorers</h2>
             <nav className='mt-6'>
                 <Link to='/home' className='px-4' onClick={() => setRouteInSession('home')} >Home</Link>
-                <Link to='/about'  className='px-4' onClick={() => setRouteInSession('about')}>About </Link>
                 <Link to='/packages'  className='px-4' onClick={() => setRouteInSession()}>Packages</Link>
                 <Link to='/myBookings'  className='px-4' onClick={() => setRouteInSession()}>My Bookings</Link>
+                <Link to='/about'  className='px-4' onClick={() => setRouteInSession('about')}>About </Link>
                 <Link to='/login'  className='px-4' onClick={() => setRouteInSession()}>Login</Link>
                 <Link to='/signup'  className='px-4' onClick={() => setRouteInSession()}>SignUp</Link>
             </nav>

@@ -4,18 +4,18 @@ import PackagesCard from '../PackagesCard/PackagesCard';
 const ALLPackages = () => {
     const [packages, setPackages] = useState([])
     useEffect(() => {
-        fetch('data.json')
+        fetch('http://localhost:5000/packages')
             .then(res => res.json())
             .then(data => setPackages(data))
     }, [])
-    console.log(packages)
+    // console.log(packages)
     return (
         <div>
             <h1 className='text-4xl font-bold text-green-900 text-center mt-10 mb-10'>Our Most Popular Adventures</h1>
             <div className='lg:grid grid-cols-3 lg:pl-10'>
                 {
                     packages.map(pack => <PackagesCard
-                    key={pack.id}
+                    key={pack._id}
                     pack = {pack}
                     ></PackagesCard>)
                 }

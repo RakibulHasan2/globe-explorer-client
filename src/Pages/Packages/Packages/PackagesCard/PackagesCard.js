@@ -1,11 +1,12 @@
 import React from 'react';
 import { BiTime, BiBookContent } from 'react-icons/bi';
 import { AiFillStar } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 
 const PackagesCard = ({ pack }) => {
-    const { image, place, perPerson, review, star, age, details, tourDuration } = pack
-    console.log(pack)
+    const { image, place, perPerson, review, _id, details, tourDuration } = pack
+    // console.log(pack)
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure><img src={image} className="h-64" alt="Shoes" /></figure>
@@ -28,7 +29,9 @@ const PackagesCard = ({ pack }) => {
                 </div>
                 <p>{details.slice(0, 70)} .....</p>
                 <div className="card-actions justify-end mt-5">
-                    <button className="btn btn-outline">See Details</button>
+                    <Link to= {`/packages/${_id}`}>
+                        <button className="btn btn-outline">See Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

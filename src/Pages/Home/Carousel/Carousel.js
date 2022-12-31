@@ -3,11 +3,6 @@ import img1 from '../../../images/home-bg-1.jpg'
 import img2 from '../../../images/home-bg-2.jpg'
 import img3 from '../../../images/home-bg-3.jpg'
 const Carousel = () => {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
 
     return (
         <div>
