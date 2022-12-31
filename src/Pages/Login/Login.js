@@ -21,6 +21,8 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 setLoginUserEmail(data.email)
+                navigate('/')
+                window.location.reload()
             })
             .catch(error => {
                 console.log(error.message)
@@ -44,6 +46,8 @@ const Login = () => {
                         saveUser(user.displayName, user.email)
                     })
                     .catch(err => console.log(err));
+                    navigate('/')
+                    window.location.reload()
             })
             .catch(error => {
                 console.log(error.message)
@@ -90,7 +94,7 @@ const Login = () => {
                         <label className="label"> <span className="label-text  text-lg text-white">Forget Password?</span></label>
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
-                    <input className='btn bg-green-800 w-full border-none' value="Login" type="submit" />
+                    <input className='btn bg-sky-800 w-full border-none' value="Login" type="submit" />
                     <div>
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>

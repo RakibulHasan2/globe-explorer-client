@@ -29,6 +29,8 @@ const SignUp = () => {
                         saveUser(data.name, data.email)
                     })
                     .catch(err => console.log(err));
+                    navigate('/')
+                    window.location.reload()
             })
             .catch(error => {
                 console.log(error)
@@ -83,7 +85,7 @@ const SignUp = () => {
                         })} className="input input-bordered w-full max-w-xs" />
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </div>
-                    <input className='btn bg-green-800  w-full mt-4 border-none' value="Sign Up" type="submit" />
+                    <input className='btn bg-sky-800  w-full mt-4 border-none' value="Sign Up" type="submit" />
                     {signUpError && <p className='text-red-600'>{signUpError}</p>}
                 </form>
                 <p className='text-lg font-bold text-black'>Already have an account <Link className='text-white font-bold' to="/login">Please Login</Link></p>

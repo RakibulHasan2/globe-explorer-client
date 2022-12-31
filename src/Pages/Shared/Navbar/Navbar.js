@@ -40,8 +40,8 @@ const Navbar = () => {
             <nav className='mt-6'>
                 <Link to='/home' className='px-4' onClick={() => setRouteInSession('home')} >Home</Link>
                 <Link to='/about'  className='px-4' onClick={() => setRouteInSession('about')}>About </Link>
-                <Link to='/shop'  className='px-4' onClick={() => setRouteInSession('shop')}>Shop</Link>
                 <Link to='/packages'  className='px-4' onClick={() => setRouteInSession()}>Packages</Link>
+                <Link to='/myBookings'  className='px-4' onClick={() => setRouteInSession()}>My Bookings</Link>
                 <Link to='/login'  className='px-4' onClick={() => setRouteInSession()}>Login</Link>
                 <Link to='/signup'  className='px-4' onClick={() => setRouteInSession()}>SignUp</Link>
             </nav>

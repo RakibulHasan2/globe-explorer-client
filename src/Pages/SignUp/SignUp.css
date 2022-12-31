@@ -1,6 +1,6 @@
 
 .back-pic{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url('../../images/login.jpg');
+    background-image: url('../../images/signup.jpg');
     height: 105vh;
     margin-top: -60px;
     background-size: cover;
