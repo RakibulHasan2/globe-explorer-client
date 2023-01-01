@@ -56,7 +56,7 @@ const Login = () => {
     const saveUser = (name, email) => {
         const user = { name, email };
         // console.log(user);
-        fetch('https://b612-used-products-resale-server-side-rakibul-hasan2-main.vercel.app/users', {
+        fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -8,8 +8,8 @@ const PackagesCard = ({ pack }) => {
     const { image, place, perPerson, review, _id, details, tourDuration } = pack
     // console.log(pack)
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={image} className="h-64" alt="Shoes" /></figure>
+        <div className="card w-96 bg-base-100 shadow-2xl mb-10">
+            <figure><img src={image} className="h-64 w-full" alt="Shoes" /></figure>
             <div className="card-body">
                 <div className='flex'>
                     <div className='flex text-yellow-400 mt-1 mr-5'>

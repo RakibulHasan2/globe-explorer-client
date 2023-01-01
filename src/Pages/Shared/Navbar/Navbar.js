@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHiking,FaHome } from 'react-icons/fa';
+import { FaHiking, FaHome } from 'react-icons/fa';
 import './Navbar.css'
+import { AuthContext } from '../../../context/AuthProvider';
+import { FaUserCircle } from 'react-icons/fa';
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
     const [stateRouteName, setStateRouteName] = useState('home')
     const setRouteInSession = (route_name) => {
         setStateRouteName(route_name)
+
+    }
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.log(err))
     }
     const menuItems = <React.Fragment>
         {/* <li><Link to="/">Home</Link></li>
@@ -39,11 +48,18 @@ const Navbar = () => {
             <h2 className='mt-3 font-bold flex text-4xl'> <FaHiking className='text-green-800 mr-4'></FaHiking> Globe Explorers</h2>
             <nav className='mt-6'>
                 <Link to='/home' className='px-4' onClick={() => setRouteInSession('home')} >Home</Link>
-                <Link to='/packages'  className='px-4' onClick={() => setRouteInSession()}>Packages</Link>
-                <Link to='/myBookings'  className='px-4' onClick={() => setRouteInSession()}>My Bookings</Link>
-                <Link to='/about'  className='px-4' onClick={() => setRouteInSession('about')}>About </Link>
-                <Link to='/login'  className='px-4' onClick={() => setRouteInSession()}>Login</Link>
-                <Link to='/signup'  className='px-4' onClick={() => setRouteInSession()}>SignUp</Link>
+                <Link to='/packages' className='px-4' onClick={() => setRouteInSession()}>Packages</Link>
+
+                <Link to='/about' className='px-4' onClick={() => setRouteInSession('about')}>About </Link>
+                {user?.uid ?
+                    <>
+                        <Link to='/myBookings' className='px-4' onClick={() => setRouteInSession()}>My Bookings</Link>
+                        <p className='btn bg-green-700 border-none text-white rounded-full' onClick={handleLogOut}>Logout</p>
+                    </>
+                    :
+                    <Link to='/login' className='px-4 ' onClick={() => setRouteInSession()}><p className='btn bg-green-700 border-none text-white rounded-full'>Login</p></Link>
+                }
+
             </nav>
         </div>
     );
